@@ -1,0 +1,88 @@
+/* ==========================================================================
+#Variables
+========================================================================== */
+
+// Size content
+$container-max-width: 1200px;
+$container-max-width_custom: 1200px;
+
+// Define space base
+$grid-gutter-width: 15px;
+$grid-gutter-width-sp: 15px;
+
+$color_white: #ffffff;
+$color_black: #000000;
+$color_green: #99cc66;
+$color_red: red;
+$color_gray: #444444;
+$color_yellow: #030303;
+$color_orange: #f39800;
+$color_blue: #7ecef4;
+$color_pink: #f19ec2;
+$color_link: #444;
+$color_content: #555;
+
+
+// Define color
+$color_main: #222;
+$color_text: #cacaca;
+$color_mainOr: 	#ffcc32;
+$color_title : #f39800;
+$color_main_2: 	#f6db83;
+$color_main_3: 	#fff4c6;
+$bg_main: #c09245;
+$bg_gd: linear-gradient(180deg,#fef5eb,rgba(254,245,234,0));
+$bg_gd2: linear-gradient(0,#fef5eb,rgba(254,245,234,0));
+$bg_gd3: linear-gradient(180deg,#fffbf7,rgba(255,251,247,0));
+$border: #ebebeb;
+$bg_orange: $color_orange;
+$bg_green: $color_green;
+
+// Define theme font-family
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+$font_base: "Roboto", sans-serif;
+$fa-pro: "Font Awesome 5 Pro";
+$fa6-pro: "Font Awesome 6 Pro";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+$font_common: "Oswald", sans-serif;
+$font_aton: "Anton", sans-serif;
+// Define theme font-size
+$fs_h1: 36;
+$fs_h2: 30;
+$fs_h3: 24;
+$fs_h4: 20;
+$fs_h5: 18;
+$fs_h6: 14;
+
+// Define background
+$bg_base: $color_yellow;
+$color_base: $color_main;
+$fs_base: 16;
+$fs_base_sp: 14;
+$fw_base: 400;
+$lh_base: 26;
+$lh_base_sp: 24;
+
+// Define theme colors
+$theme-colors: () !default;
+$colors: (
+	"white": $color_white,
+	"black": $color_black,
+	"green": $color_green,
+	"red": $color_red,
+	"gray": $color_gray,
+	"yellow": $color_yellow,
+	"orange": $color_orange,
+	"blue": $color_blue,
+	"pink": $color_pink,
+);
+$theme-colors: map-merge($colors, $theme-colors);
+
+:root {
+	--mc1: #efd373;
+	--mc2: #caaf56;
+	--hc: #ddd;
+	--bc: #9ba0b8;
+	--hff: "Heebo", sans-serif;
+	--bff: "Nunito", sans-serif;
+}

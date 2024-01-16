@@ -1,0 +1,57 @@
+/* ==========================================================================
+   #Breadcrumb
+   ========================================================================== */
+.c-breadcrumb {
+   @include bp("pc") {
+      margin-bottom: calcRem(10px);
+   }
+   @include bp("sp") {
+      margin-bottom: calcRem(10px);
+   }
+   .breadcrumb {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-flow: column;
+      padding: calcRem(10px) 0;
+      &__link {
+         @include bp("sp") {
+            display: none;
+         }
+         span {
+            font-size: calcRem(14px);
+            color: $color_orange;
+            font-weight: 300;
+            @include bp("sp") {
+               font-size: calcRem(13px);
+            }
+            a {
+               color: $color_white;
+               position: relative;
+               &::after {
+                  content: "/";
+                  display: inline-block;
+                  padding: 0 calcRem(10px);
+                  @include bp("sp") {
+                     padding: 0 calcRem(5px);
+                  }
+               }
+            }
+         }
+      }
+      span {
+         font-size: calcRem(12px);
+         color: #fff;
+         display: flex;
+         align-items: center;
+         gap: calcRem(10px);
+      }
+      .breadcrumb_last {
+         @include line-clamp(1);
+      }
+      i {
+         font-weight: 300;
+         color: #a0a0a0;
+      }
+   }
+}

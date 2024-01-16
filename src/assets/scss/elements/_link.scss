@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #Links
+   ========================================================================== */
+a {
+    color: $color_main;
+    text-decoration: none;
+    // color: $color-link;
+
+    &:hover, &:focus {
+        color: $color_title;
+    }
+}
+
+.link-btn {
+    color: $color_title;
+    font-family: $font_common;
+    i {
+        margin-left: calcRem(10px);
+    }
+}

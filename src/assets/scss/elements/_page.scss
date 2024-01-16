@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #Page
+   ========================================================================== */
+html {
+    font-size: 1rem;
+    @include bp(0, 1400px) {
+        @include fs-vw($fs_base, $lh_base, 1400);
+    }
+    @include bp("sp") {
+        @include fs-vw($fs_base, $lh_base_sp, 375);
+    }
+}
+
+body {
+    color: $color_base;
+    font-family: $font_base;
+    font-weight: $fw_base;
+    letter-spacing: calcRem(0.5px);
+    // word-break: break-all;
+    @include font-size($fs_base, $lh_base);
+    @include bp("sp") {
+        @include font-size($fs_base_sp, $lh_base_sp);
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@import "../components/pages/allpage";

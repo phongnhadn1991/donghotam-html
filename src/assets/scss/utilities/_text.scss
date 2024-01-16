@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #Text
+   ========================================================================== */
+.u-text {
+    @each $key, $val in $theme-colors {
+        &--#{$key} {
+            color: #{$val} !important;
+        }
+    }
+
+    &--center {
+        text-align: center !important;
+    }
+
+    &--right {
+        text-align: right !important;
+    }
+
+    &__pc{
+        @include bp('pc'){
+            &--center {
+                text-align: center !important;
+            }
+
+            &--right {
+                text-align: right !important;
+            }
+        }
+    }
+
+    &__sp{
+        @include bp('sp'){
+            &--center {
+                text-align: center !important;
+            }
+
+            &--right {
+                text-align: right !important;
+            }
+        }
+    }
+}

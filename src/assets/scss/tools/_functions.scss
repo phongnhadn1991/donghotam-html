@@ -1,0 +1,44 @@
+///* ========================================================================
+//   #Functions
+//   ======================================================================== */
+
+@function calcRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function opposite-direction ($directions) {
+    $opposite-directions: ();
+    $direction-map: ('top': 'bottom', 'right': 'left', 'bottom': 'top', 'left': 'right', 'center': 'center', 'ltr': 'rtl', 'rtl': 'ltr');
+
+    @each $direction in $directions {
+        $direction: to-lower-case($direction);
+
+        @if map-has-key($direction-map, $direction) {
+            $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+        }
+
+        @else {
+            @warn 'No opposite direction can be found for `#{$direction}`. Direction omitted.';
+        }
+    }
+    @return $opposite-directions;
+}
+
+@function handler-output-rem ($param) {
+    @if type-of($param) !=0 and unit($param)=='px' {
+        @return calcRem($param);
+    }
+
+    @else {
+        @return 0;
+    }
+}
+
+@function add-unit-to-value ($value, $unit) {
+    @return ($value / 16) * 1rem;
+}
+
+@function increment ($i, $increment, $unit) {
+    @return add-unit-to-value(0 + ($i * $increment), $unit);
+}

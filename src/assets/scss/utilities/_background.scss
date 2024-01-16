@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #Background
+   ========================================================================== */
+.u-background{
+	@each $key, $val in $theme-colors {
+        &--#{$key} {
+            background-color: #{$val};
+        }
+    }
+
+	&__image{
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: cover;
+	}	
+}

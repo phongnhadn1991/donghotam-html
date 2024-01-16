@@ -1,0 +1,333 @@
+///* ========================================================================
+//   #Mixins
+//   ======================================================================== */
+@mixin fs($fontsize: 16, $lineheight: 30, $base: 16) {
+    font-size: $fontsize + px;
+    font-size: ($fontsize / $base) * 1rem;
+    line-height: ($lineheight / $base) * 1rem;
+}
+
+@mixin fs-vw($fontsize: 16, $lineheight: 30, $area-width: 320) {
+    font-size: #{($fontsize / $area-width) * 100}vw;
+    line-height: ceil($lineheight * $container-max-width / $fontsize) / $container-max-width;
+}
+
+@mixin hover-op($val: 0.75) {
+    opacity: 1;
+    transition: 0.25s opacity;
+
+    &:hover {
+        opacity: $val;
+    }
+}
+
+@mixin position($pos, $pos_type, $pos1: 0, $pos2: 0, $index: null, $w: null, $h: null) {
+    position: $pos;
+
+    @if $index != "" {
+        z-index: $index;
+    }
+
+    @if $pos_type== "tl" {
+        @if type-of($pos1) ==number and unit($pos1) != "%" {
+            top: handler-output-rem($pos1);
+        } @else {
+            top: $pos1;
+        }
+
+        @if type-of($pos2) ==number and unit($pos2) != "%" {
+            left: handler-output-rem($pos2);
+        } @else {
+            left: $pos2;
+        }
+    } @else if $pos_type== "tr" {
+        @if type-of($pos1) ==number and unit($pos1) != "%" {
+            top: handler-output-rem($pos1);
+        } @else {
+            top: $pos1;
+        }
+
+        @if type-of($pos2) ==number and unit($pos2) != "%" {
+            right: handler-output-rem($pos2);
+        } @else {
+            right: $pos2;
+        }
+    } @else if $pos_type== "bl" {
+        @if type-of($pos1) ==number and unit($pos1) != "%" {
+            bottom: handler-output-rem($pos1);
+        } @else {
+            bottom: $pos1;
+        }
+
+        @if type-of($pos2) ==number and unit($pos2) != "%" {
+            left: handler-output-rem($pos2);
+        } @else {
+            left: $pos2;
+        }
+    } @else if $pos_type== "br" {
+        @if type-of($pos1) ==number and unit($pos1) != "%" {
+            bottom: handler-output-rem($pos1);
+        } @else {
+            bottom: $pos1;
+        }
+
+        @if type-of($pos2) ==number and unit($pos2) != "%" {
+            right: handler-output-rem($pos2);
+        } @else {
+            right: $pos2;
+        }
+    }
+
+    @if type-of($w) ==number and unit($w) != "%" {
+        width: calcRem($w);
+    } @else {
+        width: $w;
+    }
+
+    @if type-of($h) ==number and unit($h) != "%" {
+        height: calcRem($h);
+    } @else {
+        height: $h;
+    }
+}
+
+@mixin repeat-unit-width($start, $end, $unit, $increment: 1) {
+    @each $breakpoint in $breakpoints {
+        @if $breakpoint==normal {
+            @for $i from $start through $end {
+                .u-width--#{$i * $increment} {
+                    width: increment($i, $increment, $unit) !important;
+                }
+            }
+        } @else {
+            @include bp("#{$breakpoint}") {
+                @for $i from $start through $end {
+                    .u-width__#{$breakpoint}--#{$i * $increment} {
+                        width: increment($i, $increment, $unit) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin repeat-unit-classes-map($name-map, $start, $end, $unit, $increment: 1) {
+    @each $breakpoint in $breakpoints {
+        @if $breakpoint==normal {
+            @each $slug in $name-map {
+                $key: nth($slug, 1);
+                $value: nth($slug, 2);
+
+                /* #{$slug} */
+
+                @if $value==x {
+                    @for $i from $start through $end {
+                        @if $key== "padding" {
+                            .px--#{$i * $increment} {
+                                #{$key}-left: increment($i, $increment, $unit) !important;
+                                #{$key}-right: increment($i, $increment, $unit) !important;
+                            }
+                        } @else if $key== "margin" {
+                            .mx--#{$i * $increment} {
+                                #{$key}-left: increment($i, $increment, $unit) !important;
+                                #{$key}-right: increment($i, $increment, $unit) !important;
+                            }
+                        }
+                    }
+                } @else if $value==y {
+                    @for $i from $start through $end {
+                        @if $key== "padding" {
+                            .py--#{$i * $increment} {
+                                #{$key}-top: increment($i, $increment, $unit) !important;
+                                #{$key}-bottom: increment($i, $increment, $unit) !important;
+                            }
+                        } @else if $key== "margin" {
+                            .my--#{$i * $increment} {
+                                #{$key}-top: increment($i, $increment, $unit) !important;
+                                #{$key}-bottom: increment($i, $increment, $unit) !important;
+                            }
+                        }
+                    }
+                } @else {
+                    @for $i from $start through $end {
+                        // .#{$key}-#{$value}--#{$i * $increment} {
+                        //     #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                        // }
+                        @if $key== "padding" {
+                            @if $value== "left" {
+                                .pl--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "right" {
+                                .pr--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "top" {
+                                .pt--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "bottom" {
+                                .pb--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            }
+                        } @else if $key== "margin" {
+                            @if $value== "left" {
+                                .ml--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "right" {
+                                .mr--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "top" {
+                                .mt--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $value== "bottom" {
+                                .mb--#{$i * $increment} {
+                                    #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } @else {
+            @include bp("#{$breakpoint}") {
+                @each $slug in $name-map {
+                    $key: nth($slug, 1);
+                    $value: nth($slug, 2);
+
+                    /* #{$slug} */
+
+                    @if $value==x {
+                        @for $i from $start through $end {
+                            @if $key== "padding" {
+                                .px-#{$breakpoint}--#{$i * $increment} {
+                                    #{$key}-left: increment($i, $increment, $unit) !important;
+                                    #{$key}-right: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $key== "margin" {
+                                .mx-#{$breakpoint}--#{$i * $increment} {
+                                    #{$key}-left: increment($i, $increment, $unit) !important;
+                                    #{$key}-right: increment($i, $increment, $unit) !important;
+                                }
+                            }
+                        }
+                    } @else if $value==y {
+                        @for $i from $start through $end {
+                            @if $key== "padding" {
+                                .py-#{$breakpoint}--#{$i * $increment} {
+                                    #{$key}-top: increment($i, $increment, $unit) !important;
+                                    #{$key}-bottom: increment($i, $increment, $unit) !important;
+                                }
+                            } @else if $key== "margin" {
+                                .my-#{$breakpoint}--#{$i * $increment} {
+                                    #{$key}-top: increment($i, $increment, $unit) !important;
+                                    #{$key}-bottom: increment($i, $increment, $unit) !important;
+                                }
+                            }
+                        }
+                    } @else {
+                        @for $i from $start through $end {
+                            @if $key== "padding" {
+                                @if $value== "left" {
+                                    .pl-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "right" {
+                                    .pr-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "top" {
+                                    .pt-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "bottom" {
+                                    .pb-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                }
+                            } @else if $key== "margin" {
+                                @if $value== "left" {
+                                    .ml-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "right" {
+                                    .mr-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "top" {
+                                    .mt-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                } @else if $value== "bottom" {
+                                    .mb-#{$breakpoint}--#{$i * $increment} {
+                                        #{$key}-#{$value}: increment($i, $increment, $unit) !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: ($font-size / 16) * 1rem;
+    @if $line-height==auto {
+        line-height: 1;
+    } @else {
+        @if (type-of($line-height) ==number or $line-height==inherit or $line-height==normal) {
+            line-height: ($line-height / 16) * 1rem;
+        } @else if ($line-height !=none and $line-height !=false) {
+            @warn 'D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.';
+        }
+    }
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transition($transition) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin line-clamp($number) {
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin imgOb() {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+@mixin fa-font($code) {
+    font-family: $fa-pro;
+    content: $code;
+}

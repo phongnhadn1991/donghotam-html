@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #Header
+   ========================================================================== */
+body {
+   height: 5000px;
+}
+.p-header {
+   background: #fff;
+   border-bottom: 1px solid #EAEAEC;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   width: 100%;
+   height: calcRem(90px);
+   transition: all .3s ease-in-out;
+   &.hasScroll {
+      box-shadow: 1px 4px 5px -3px rgba(0,0,0,0.1);
+   }
+   &Wrap {
+      max-width: calcRem(1010px);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: calcRem(15px);
+      padding: calcRem(10px) calcRem(10px);
+   }
+   &Logo {
+      h1 {
+         font-size: 0;
+         line-height: 0;
+      }
+      a {
+         display: flex;
+      }
+   }
+   &Menu {
+      nav {
+         ul {
+            display: flex;
+            gap: calcRem(20px);
+            li {
+               a {
+                  font-size: calcRem(13px);
+                  text-transform: uppercase;
+                  display: block;
+                  padding: calcRem(15px) 0 calcRem(20px);
+               }
+            }
+         }
+      }
+   }
+   &Right {
+      ul {
+         display: flex;
+         gap: calcRem(15px);
+         align-items: center;
+         li {
+            a {
+               display: block;
+               padding: calcRem(15px) 0 calcRem(20px);
+            }
+         }
+      }
+   }
+}

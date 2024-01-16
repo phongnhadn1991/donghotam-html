@@ -1,0 +1,54 @@
+/* ==========================================================================
+   #Wrapper
+   ========================================================================== */
+.c-main {
+    @include bp('pc') {
+        // margin-top: calcRem(218px);
+    }
+    @include bp('sp') {
+        // margin-top: calcRem(112px);
+    }
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: calcRem($grid-gutter-width);
+    padding-right: calcRem($grid-gutter-width);
+    @include bp('pc') {
+        max-width: calcRem($container-max-width);
+    }    
+    @include bp('sp') {
+        padding-left: calcRem($grid-gutter-width-sp);
+        padding-right: calcRem($grid-gutter-width-sp);
+    }
+}
+
+.container_content {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: calcRem($grid-gutter-width);
+    padding-right: calcRem($grid-gutter-width);
+    @include bp('pc') {
+        max-width: calcRem($container-max-width_custom);
+    }    
+    @include bp('sp') {
+        padding-left: calcRem($grid-gutter-width-sp);
+        padding-right: calcRem($grid-gutter-width-sp);
+    }
+}
+
+.c-layout{ 
+    &--sidebar{
+        @include bp('pc'){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: calcRem(1040px);
+            margin: 0 auto;
+        }
+    }
+}
+
+.u-hidden {
+    overflow: hidden;
+}

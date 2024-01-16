@@ -1,0 +1,373 @@
+/* ==========================================================================
+   #Animations
+   ========================================================================== */
+.ani {
+    &--opa09 {
+        @include hover-op(0.9);
+    }
+
+    &--opa075 {
+        @include hover-op(0.75);
+    }
+
+    &--opa05 {
+        @include hover-op(0.5);
+    }
+
+    &--zoom {
+        background-color: $color_white;
+        overflow: hidden;
+
+        img {
+            display: block;
+            transition-duration: 0.3s;
+        }
+
+        &:hover img {
+            opacity: 0.9;
+            transform: scale(1.1);
+            transition-duration: 0.3s;
+        }
+    }
+
+    &--scrollOn {
+        animation: scrollOn 1s ease-in-out forwards;
+    }
+
+    &--scrollOff {
+        animation: scrollOff 375ms ease-in-out forwards;
+    }
+
+    &--loader {
+        position: relative;
+
+        &::after {
+            content: '';
+            border: 3px solid $color_white;
+            animation: loader infinite linear 1s;
+            border-radius: 100%;
+            border-top: 3px solid transparent;
+            @include position(absolute, 'tl', calc(50% - 20px), calc(50% - 20px), 100, 40px, 40px);
+        }
+    }
+
+    &--backdrop {
+        &::before {
+            content: '';
+            background: $color_black;
+            opacity: 0;
+            transition: 0.2s ease-in-out;
+            @include position(absolute, 'tl', 0, 0, 3, 100%, 100%);
+        }
+
+        &:hover::before {
+            opacity: 0.5;
+        }
+    }
+
+    &--shine {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -75%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+            -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+        }
+        &:hover {
+            &::before {
+                -webkit-animation: shine 1s;
+                animation: shine 1s;
+            }
+            @keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scrollOn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes scrollOff {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+}
+
+
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg) opacity 0.35;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+// Anima
+
+.movingX {
+    animation: movingX 8s linear infinite;
+  }
+  @keyframes movingX {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .jump {
+    animation: jumpAni 7s linear infinite;
+  }
+  @keyframes jumpAni {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .jump-reverse {
+    animation: jumpReverseAni 7s linear infinite;
+  }
+  @keyframes jumpReverseAni {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .spin {
+    animation: spin 15s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(40deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  
+  // This is for Progress bar animation also has a js code
+  @keyframes animate-positive {
+    0% {
+      width: 0; 
+    } 
+  }
+  
+  
+  .scalein.as-animated {
+    --animation-name: scalein;
+  }
+  
+  .slidetopleft.as-animated {
+    --animation-name: slidetopleft;
+  }
+  
+  .slidebottomright.as-animated {
+    --animation-name: slidebottomright;
+  }
+  
+  .slideinleft.as-animated {
+    --animation-name: slideinleft;
+  }
+  
+  .slideinright.as-animated {
+    --animation-name: slideinright;
+  }
+  
+  .slideinup.as-animated {
+    --animation-name: slideinup;
+  }
+  
+  .slideindown.as-animated {
+    --animation-name: slideindown;
+  }
+  .rollinleft.as-animated {
+    --animation-name: rollinleft;
+  }
+  .rollinright.as-animated {
+    --animation-name: rollinright;
+  }
+  
+  
+  .scalein,
+  .slidetopleft,
+  .slidebottomright,
+  .slideinleft,
+  .slideinright,
+  .slideindown,
+  .slideinup,
+  .rollinleft,
+  .rollinright {
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-name: var(--animation-name);
+  }
+  
+  .as-animated {
+    opacity: 1;
+  }
+  
+  @keyframes slideinup {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideinright {
+    0% {
+      opacity: 0;
+      transform: translateX(70px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideindown {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideinleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-70px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slidebottomright {
+    0% {
+      opacity: 0;
+      transform: translateX(100px) translateY(100px);
+    }
+  
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  
+  @keyframes slidetopleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) translateY(-100px);
+    }
+  
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  
+  @keyframes scalein {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    
+    100% {
+      transform: scale(1);
+  
+    }
+  }
+  
+  @keyframes rollinleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-120deg);
+    }
+    to {
+        transform: translateX(0) rotate(0deg);
+    }
+  }
+  @keyframes rollinright {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) rotate(120deg);
+    }
+    to {
+        transform: translateX(0) rotate(0deg);
+    }
+  }

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   #Button
+   ========================================================================== */
+.c-button {
+    a {
+        font-family: $font_common;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        vertical-align: middle;
+        display: inline-block;
+        border: none;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $color_orange;
+        font-weight: 500;
+        color: #fff;
+        -webkit-box-shadow: 0px 6px 16px rgba(13, 94, 244, 0.024);
+        box-shadow: 0px 6px 16px rgba(13, 94, 244, 0.024);
+        border-radius: calcRem(5px);
+        padding: calcRem(12px) calcRem(30px);
+        font-size: calcRem(14px);
+        letter-spacing: calcRem(1px);
+        @include bp('sp') {
+            padding: calcRem(10px) calcRem(15px);
+            font-size: calcRem(13px);
+        }
+        i {
+            margin-left: calcRem(10px);
+            @include bp('sp') {
+                margin-left: calcRem(5px);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            width: 600%;
+            background-color: $color_main;
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(60deg);
+            transform: translateX(-50%) translateY(-50%) rotate(60deg);
+            z-index: -1;
+            -webkit-transition: 0.7s ease;
+            transition: 0.7s ease;
+        }
+        &:hover, &.active {
+            &::before {
+                height: 560%;
+            }
+        }
+    }
+    &.style1 {
+        a {
+            background: transparent;
+            &:hover {
+                background: $bg_main;
+            }
+        }
+    }
+}
+
+.c-button_01 {
+    a {
+        font-size: calcRem(16px);
+        min-width: calcRem(160px);
+        font-weight: 300;
+        height: calcRem(45px);
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        span {
+            color: $color_white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        svg {
+            height: 45px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        rect {
+            fill: none;
+            stroke: $color_main;
+            stroke-width: 2;
+            stroke-dasharray: 422, 0;
+            transition: all 0.35s linear;
+        }
+        &:hover {
+            rect {
+                stroke-width: 5;
+                stroke-dasharray: 15, 310;
+                stroke-dashoffset: 48;
+                transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            span {
+                color: $color_main;
+            }
+        }
+    }
+}

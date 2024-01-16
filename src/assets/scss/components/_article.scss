@@ -1,0 +1,497 @@
+.c-article_post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+    color: #cacaca;
+}
+article.post-content cite,
+article.post-content dfn,
+article.post-content em {
+    font-style: italic;
+}
+article.post-content p {
+    margin: 0 0 calcRem(20px) !important;
+    line-height: 1.8;
+    font-size: calcRem(16px);
+}
+article.post-content h1,
+article.post-content h2,
+article.post-content h3,
+article.post-content h4,
+article.post-content h5 {
+    font-family: Roboto;
+}
+article.post-content h1 {
+    font-size: calcRem(calcRem (25px));
+}
+article.post-content h2 {
+    font-size: calcRem(20px);
+    margin-bottom: calcRem(10px);
+    font-weight: 700;
+}
+article.post-content h3 {
+    font-size: calcRem(18px);
+    margin: calcRem(1calcRem (5px)) calcRem(0px);
+}
+article.post-content h4 {
+    font-size: calcRem(16px);
+}
+article.post-content h5 {
+    font-size: calcRem(14px);
+}
+article.post-content ol,
+article.post-content ul {
+    margin: calcRem(16px) 0;
+    padding: 0 0 0 calcRem(40px);
+}
+article.post-content ul {
+    list-style-type: square;
+}
+article.post-content ol {
+    list-style: decimal outside;
+}
+article.post-content li > ul,
+article.post-content li > ol {
+    margin: 0;
+}
+article.post-content dl {
+    margin: 0 calcRem(20px);
+}
+article.post-content dt {
+    font-weight: bold;
+}
+article.post-content dd {
+    margin: 0 0 calcRem(20px);
+}
+article.post-content strong {
+    font-weight: bold;
+}
+article.post-content code,
+article.post-content kbd,
+article.post-content pre,
+article.post-content samp {
+    font-family: monospace, serif;
+    font-size: calcRem(14px);
+}
+article.post-content pre {
+    background: #f5f5f5;
+    color: #666;
+    font-family: monospace;
+    font-size: calcRem(14px);
+    margin: calcRem(20px) 0;
+    overflow: auto;
+    padding: calcRem(20px);
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+article.post-content blockquote,
+article.post-content q {
+    quotes: none;
+}
+article.post-content blockquote:before,
+article.post-content blockquote:after,
+article.post-content q:before,
+article.post-content q:after {
+    content: "";
+    content: none;
+}
+article.post-content blockquote {
+    font-size: calcRem(24px);
+    font-style: italic;
+    font-weight: 300;
+    margin: calcRem(24px) calcRem(40px);
+}
+article.post-content blockquote blockquote {
+    margin-right: 0;
+}
+article.post-content blockquote cite,
+article.post-content blockquote small {
+    font-size: calcRem(14px);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+article.post-content cite {
+    border-bottom: 0;
+}
+article.post-content abbr[title] {
+    border-bottom: calcRem(1px) dotted;
+}
+article.post-content address {
+    font-style: italic;
+    margin: 0 0 calcRem(24px);
+}
+article.post-content del {
+    color: #333;
+}
+article.post-content ins {
+    background: #fff9c0;
+    border: none;
+    color: #333;
+    text-decoration: none;
+}
+article.post-content sub,
+article.post-content sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+article.post-content sup {
+    top: -0.5em;
+}
+article.post-content sub {
+    bottom: -0.25em;
+}
+article.post-content a {
+    color: #ca3c08;
+    text-decoration: none;
+}
+article.post-content a:visited {
+    color: #ac0404;
+}
+article.post-content a:focus {
+    outline: thin dotted;
+}
+article.post-content a:active,
+article.post-content a:hover {
+    color: #ea9629;
+    outline: 0;
+}
+article.post-content a:hover {
+    text-decoration: underline;
+}
+article.post-content .alignleft {
+    float: left;
+    margin: calcRem(5px) calcRem(20px) calcRem(5px) 0;
+}
+article.post-content .alignright {
+    float: right;
+    margin: calcRem(5px) 0 calcRem(5px) calcRem(20px);
+}
+article.post-content .aligncenter {
+    display: block;
+    margin: calcRem(5px) auto;
+}
+article.post-content img.alignnone {
+    display: block;
+    margin: calcRem(5px) auto;
+}
+article.post-content table {
+    /* border:1px solid #ededed; */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: calcRem(14px);
+    line-height: 2;
+    margin: 0 0 calcRem(20px);
+    width: 100%;
+}
+article.post-content caption,
+article.post-content th,
+article.post-content td {
+    font-weight: normal !important;
+    border: calcRem(1px) solid #ededed;
+    text-align: left;
+}
+article.post-content caption {
+    font-size: calcRem(16px);
+    margin: calcRem(20px) 0;
+}
+article.post-content th {
+    font-weight: normal !important;
+    text-transform: uppercase;
+    border: calcRem(1px) solid #ededed;
+}
+article.post-content td {
+    border: calcRem(1px) solid #949494;
+    padding: calcRem(6px) calcRem(10px) calcRem(6px) calcRem(10px);
+}
+article.post-content img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    article.post-content img {
+        border: calcRem(8px) solid #ededed;
+    }
+    border: 8;
+}
+article.post-content .wp-caption {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+article.post-content .wp-caption.alignleft {
+    margin: calcRem(5px) calcRem(10px) calcRem(5px) 0;
+}
+article.post-content .wp-caption.alignright {
+    margin: calcRem(5px) 0 calcRem(5px) calcRem(10px);
+}
+article.post-content .wp-caption-dt {
+    margin: 0;
+}
+article.post-content .wp-caption .wp-caption-text,
+article.post-content .wp-caption-dd {
+    color: #220e10;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding: 0;
+}
+article.post-content .mceTemp + ul,
+article.post-content .mceTemp + ol {
+    list-style-position: inside;
+}
+article.post-content {
+    font-size: calcRem(16px);
+}
+article.post-content div {
+    margin: 0 0 calcRem(5px);
+    line-height: 1.8;
+    font-size: calcRem(16px);
+}
+
+article.post-content {
+    .wp-block-image figcaption {
+        margin: 3px 0 0;
+        font-size: 12px;
+        color: #a0a0a0;
+        text-align: center;
+    }
+    .wp-caption .wp-caption-text {
+        margin: 3px 0 0;
+        font-size: 12px;
+        color: #a0a0a0;
+        text-align: center;
+    }
+
+    .wp-caption {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .wp-block-image {
+        text-align: center;
+        display: block;
+        margin: 5px auto 1.25em auto;
+    }
+    .aligncenter,
+    div.aligncenter {
+        text-align: center;
+        display: block;
+        margin: 5px auto 1.25em auto;
+    }
+    .aligncenter {
+        clear: both;
+    }
+
+    ul {
+        list-style: square;
+    }
+
+    ol,
+    ul {
+        @include bp("pc") {
+            padding-left: 2.14285714em;
+        }
+        @include bp("sp") {
+            padding-left: calcRem(16px);
+        }
+        list-style-position: inside;
+        margin-bottom: 1.5em;
+    }
+    li {
+        margin-bottom: 0.5em;
+        color: #fff;
+        text-indent: calcRem(-22px);
+        padding-left: calcRem(20px);
+    }
+    a {
+        color: #ffcc32;
+    }
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 1.25em 0;
+        padding: 0;
+    }
+    hr.post-divider {
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    audio,
+    canvas,
+    img,
+    video {
+        vertical-align: middle;
+    }
+    img {
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+        height: auto;
+    }
+    figcaption {
+        margin: 3px 0 1em;
+        font-size: 11px;
+        color: #a0a0a0;
+    }
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    textarea {
+        resize: vertical;
+    }
+    button,
+    input,
+    label,
+    optgroup,
+    select,
+    textarea {
+        font: inherit;
+    }
+    [class*="jeg_"] .fa {
+        font-family: FontAwesome;
+    }
+    span.required {
+        color: #f70d28;
+        font-weight: 400;
+        font-family: monospace;
+        font-size: 16px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+        text-rendering: optimizeLegibility;
+    }
+    h1 {
+        margin: 0.67em 0 0.5em;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        @include bp("pc") {
+            font-size: 2.25em;
+        }
+    }
+    h2 {
+        @include bp("pc") {
+            font-size: 1.953em;
+        }
+        margin: 0.83em 0 0.5em;
+        line-height: 1.35;
+    }
+    h3 {
+        @include bp("pc") {
+            font-size: 1.563em;
+        }
+        margin: 1em 0 0.5em;
+        line-height: 1.4;
+    }
+    h4 {
+        @include bp("pc") {
+            font-size: 1.25em;
+        }
+        margin: 1.33em 0 0.5em;
+        line-height: 1.5;
+    }
+    h5 {
+        @include bp("pc") {
+            font-size: 1.1em;
+        }
+        margin: 1.25em 0 0.5em;
+        line-height: 1.6;
+    }
+    h6 {
+        font-size: 0.85em;
+        margin: 1.6em 0 1em;
+    }
+    b,
+    strong {
+        font-weight: 700;
+    }
+    em,
+    i {
+        font-style: italic;
+    }
+    blockquote {
+        margin: 1em 40px;
+    }
+    dfn {
+        font-style: italic;
+    }
+    hr {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0;
+    }
+    mark {
+        background: #efca56;
+        padding: 0 0.4em;
+        color: #fff;
+    }
+    p,
+    pre {
+        margin: 0 0 1.75em;
+        text-rendering: optimizeLegibility;
+    }
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 0.9em;
+        padding: 0.2em 0.5em;
+    }
+    pre {
+        color: #7b7b7b;
+        background: #fafafa;
+        border: 1px solid #eee;
+        padding: 0.5em 1.5em 0.5em 1.5em;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    small {
+        font-size: 80%;
+    }
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+}
+
+.entry-header {
+    margin-bottom: calcRem(40px);
+    padding-bottom: calcRem(15px);
+    border-bottom: 1px solid #303030;
+    h1 {
+        font-weight: 700;
+        margin-bottom: calcRem(10px);
+        @include bp('sp') {
+            font-size: calcRem(30px);
+        }
+    }
+}

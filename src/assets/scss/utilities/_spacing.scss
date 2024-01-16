@@ -1,0 +1,121 @@
+/* ==========================================================================
+   #Spacing
+   ========================================================================== */
+// variables
+$l: left;
+$r: right;
+$t: top;
+$b: bottom;
+$x: x;
+$y: y;
+$pad: padding;
+$mar: margin;
+$breakpoints: normal,
+pc,
+sp;
+
+// map with keywords used to automate building of CSS class names and property names
+$repeatable-slugs: $pad $l,
+$pad $r,
+$pad $t,
+$pad $b,
+$pad $x,
+$pad $y,
+$mar $l,
+$mar $r,
+$mar $t,
+$mar $b,
+$mar $x,
+$mar $y;
+
+@include repeat-unit-classes-map($repeatable-slugs, 0, 50, px, 5);
+
+.m {
+    &--auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &l {
+        &--auto {
+            margin-left: auto;
+        }
+    }
+
+    &r {
+        &--auto {
+            margin-right: auto;
+        }
+    }
+
+    &x {
+
+        @include bp('pc') {
+            &__pc {
+                &--auto {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        @include bp('sp') {
+            &__sp {
+                &--auto {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        &--auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.p {
+    &--auto {
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    &l {
+        &--auto {
+            padding-left: auto;
+        }
+    }
+
+    &r {
+        &--auto {
+            padding-right: auto;
+        }
+    }
+
+    &x {
+
+        @include bp('pc') {
+            &__pc {
+                &--auto {
+                    padding-left: auto;
+                    padding-right: auto;
+                }
+            }
+        }
+
+        @include bp('sp') {
+            &__sp {
+                &--auto {
+                    padding-left: auto;
+                    padding-right: auto;
+                }
+            }
+        }
+
+        &--auto {
+            padding-left: auto;
+            padding-right: auto;
+        }
+    }
+}

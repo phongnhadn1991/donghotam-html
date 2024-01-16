@@ -1,0 +1,48 @@
+{
+  "caclRem": {
+    "prefix": ["crem", "cal"],
+    "body": ["calcRem(${1:px})"],
+    "description": "calcRem(px)"
+  },
+  "bp": {
+    "prefix": ["bp"],
+    "body": ["@include bp('${1}')"],
+    "description": "bp(pc-sp)"
+  },
+  "lang": {
+    "prefix": ["lang"],
+    "body": [
+      "<?php if (CURLANG === 'en') : ?>",
+      "$1",
+      "<?php elseif (CURLANG === 'vi') : ?>",
+      "$2",
+      "<?php endif; ?>"
+    ],
+    "description": "Polylang"
+  },
+  "vardump": {
+    "prefix": ["vardump"],
+    "body": [
+      "<pre>",
+      "<?php echo var_export(${1},true) ?>",
+      "</pre>"
+    ],
+    "description": "vardump php"
+  },
+  "loopAcf": {
+    "prefix": ["loopAcf"],
+    "body": [
+      "<?php if (CURLANG === 'en') : ?>",
+      "<?php $rows${1} = get_field('${2}', OPTION_KEY); ?>",
+      "<?php elseif (CURLANG === 'vi') : ?>",
+      "<?php $rows${1} = get_field('${2}_vi', OPTION_KEY); ?>",
+      "<?php endif; ?>",
+      "<?php if ($rows{1}) : ?>",
+      "<?php foreach ($rows{1} as $row) : ?>",
+      "${3}",
+      "<?php endforeach; ?>",
+      "<?php endif; ?>"
+    ],
+    "description": "loopAcf"
+  },
+}

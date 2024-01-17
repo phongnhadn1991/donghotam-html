@@ -2,6 +2,7 @@
    #Header
    ========================================================================== */
 body {
+   padding-top: calcRem(90px);
    height: 5000px;
 }
 .p-header {
@@ -18,7 +19,7 @@ body {
       box-shadow: 1px 4px 5px -3px rgba(0,0,0,0.1);
    }
    &Wrap {
-      max-width: calcRem(1010px);
+      max-width: calcRem(1040px);
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -54,9 +55,24 @@ body {
    &Right {
       ul {
          display: flex;
-         gap: calcRem(15px);
+         gap: calcRem(20px);
          align-items: center;
          li {
+            position: relative;
+            &:last-child {
+               &::after {
+                  margin-top: calcRem(-2px);
+                  position: absolute;
+                  display: block;
+                  content: '';
+                  width: calcRem(1px);
+                  height: calcRem(18px);
+                  background: #111;
+                  left: calcRem(-10px);
+                  top: 50%;
+                  transform: translateY(-50%);
+               }
+            }
             a {
                display: block;
                padding: calcRem(15px) 0 calcRem(20px);

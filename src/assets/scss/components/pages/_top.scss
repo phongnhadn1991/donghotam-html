@@ -1,0 +1,64 @@
+.owl-theme {
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: calcRem(2px);
+    .owl-dot {
+      span {
+        background: #CED2D7!important;
+        border: 2px solid #CED2D7!important;
+        box-shadow: none!important;
+        cursor: pointer!important;
+        height: 15px!important;
+        width: 15px!important;
+        transition: 0.2s;
+        vertical-align: middle;
+      }
+      &.active {
+        span {
+          background: rgba(255, 255, 255, 1) none repeat scroll 0 0!important;
+          border: 2px solid #000!important;
+          box-shadow: none!important;
+        }
+      }
+    }
+  }
+  .owl-nav {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: calcRem(-10px);
+    button {
+      font-size: calcRem(80px) !important;
+      outline: none;
+      &:hover {
+        background: inherit !important;
+        color: inherit !important;
+      }
+    }
+  }
+}
+.p-slide {
+  margin-bottom: calcRem(40px);
+}
+
+.p-branch {
+  &List {
+    padding: 0 calcRem(40px);
+  }
+  &Item {
+    a {
+      display: block;
+      text-align: center;
+    }
+    img {
+      width: auto !important;
+      margin: auto !important
+    }
+  }
+}

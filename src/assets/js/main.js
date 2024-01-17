@@ -266,13 +266,6 @@ let Obj = {};
     });
   };
 
-  // BUTTON SCROLL TOP
-  const handleBtnScrollTop = function () {
-    $btnScrollTop.addEventListener("click", function () {
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-  };
-
   // SCROLL ADD STICKY HEADER
   window.addEventListener("scroll", function () {
     if (window.scrollY >= $header.clientHeight) {
@@ -299,7 +292,6 @@ let Obj = {};
     Obj.handelMenuClickInfo();
     Obj.initAnimationScroll();
     Obj.menuSpMulti();
-    handleBtnScrollTop();
     // Obj.sliderHomePage();
   });
 

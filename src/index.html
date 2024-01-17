@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/libs/scrollbar/jquery.scrollbar.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/libs/owlcarousel/owl.theme.default.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/libs/owlcarousel/owl.carousel.min.css" referrerpolicy="no-referrer" />
     <!-- build:css css/main.min.css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
     <!-- endbuild -->
@@ -52,6 +54,88 @@
     </header>
 
     <main class="c-main c-main-home c-page_home">
+        <div class="p-slide">
+            <div class="container">
+                <div class="p-slideList owl-carousel owl-theme" id="js-slideFv">
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-slideItem">
+                        <a href="#">
+                            <img src="./assets/images/slider6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-branch">
+            <div class="container">
+                <div class="p-branchList owl-carousel owl-theme" id="js-slideBranch">
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch6.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="p-branchItem">
+                        <a href="#">
+                            <img src="./assets/images/branch8.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer id="footer" class="c-footer">
@@ -60,10 +144,42 @@
     <!-- ======== JAVASCRIPT ======== -->
     <script type="text/javascript" src="./assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./assets/libs/fancybox/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="./assets/libs/scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="./assets/libs/owlcarousel/owl.carousel.min.js" referrerpolicy="no-referrer"></script>
     <!-- build:js js/bundle.min.js -->
     <script type="text/javascript" src="./assets/js/main.js"></script>
     <!-- endbuild -->
 </body>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        const slideFV = () => {
+            $("#js-slideFv").owlCarousel({
+                items: 1,
+                autoplay:true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: false,
+                autoplaySpeed: 1000,
+                lazyLoad: true,
+                nav: false,
+                dots: true,
+                animateOut: 'fadeOut',
+                touchDrag: true,
+            });
+        }
+        const slideBranch = () => {
+            $("#js-slideBranch").owlCarousel({
+                items: 5,
+                autoplay:true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: false,
+                autoplaySpeed: 1000,
+                lazyLoad: true,
+                nav: true,
+                dots: false,
+                touchDrag: true,
+            });
+        }
+        slideFV();
+        slideBranch();
+    });
+</script>
 </html>

@@ -31,6 +31,7 @@
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: -1;
     transform: translateY(-50%);
     margin-top: calcRem(-10px);
     button {
@@ -47,18 +48,102 @@
   margin-bottom: calcRem(40px);
 }
 
-.p-branch {
-  &List {
-    padding: 0 calcRem(40px);
-  }
-  &Item {
-    a {
-      display: block;
-      text-align: center;
+.c-page {
+  &_home {
+    .p-branch {
+      margin-bottom: calcRem(40px);
+      &List {
+        padding: 0 calcRem(40px);
+      }
+      &Item {
+        a {
+          display: block;
+          padding: 0 calcRem(10px);
+          text-align: center;
+        }
+        img {
+          width: auto !important;
+          margin: auto !important
+        }
+      }
     }
-    img {
-      width: auto !important;
-      margin: auto !important
+    
+    .p-aboutUs {
+      padding: calcRem(20px) 0;
+      background: #fcfcfc;
+      border-top: 1px solid #F2F2F2;
+      border-bottom: 1px solid #F2F2F2;
+      &_ct {
+        .post-content {
+          p {
+            font-size: calcRem(15px);
+            margin-bottom: calcRem(5px) !important;
+          }
+        }
+      }
+    }
+    
+    .p-blog {
+      padding: calcRem(30px) 0;
+      border-bottom: 1px solid #F2F2F2;
+      &List {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: calcRem(20px);
+      }
+      &Item {
+        &_thumb {
+          margin-bottom: calcRem(5px);
+          height: calcRem(220px);
+          img {
+            @include imgOb;
+          }
+        }
+        &_title {
+          background: url('../../assets/images/icon_arrow_right.png') left 1px no-repeat;
+          display: block;
+          background-position-y: calcRem(5px);
+          float: left;
+          color: #000;
+          font-weight: 600;
+          padding: 0 0 calcRem(2px) calcRem(26px);
+          font-size: calcRem(15px);
+          color: #444;
+        }
+      }
+    }
+
+    .p-product {
+      padding: calcRem(40px) 0;
+      &List {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: calcRem(30px);
+      }
+      &Item {
+        background-color: #f7f7f7;
+        border: solid 1px #c8c8c8;
+        &_body {
+          text-align: center;
+          font-size: calcRem(18px);
+        }
+        &_title {
+          padding: calcRem(10px);
+          background-color: #000;
+          color: #fff;
+          margin-top: 8px;
+        }
+        &_price {
+          padding: calcRem(10px);
+          text-align: center;
+          .reduced {
+            color: red;
+          }
+          .original {
+            color: #666;
+          }
+        }
+      }
     }
   }
 }

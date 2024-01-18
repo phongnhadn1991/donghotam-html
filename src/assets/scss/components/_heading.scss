@@ -1,0 +1,20 @@
+.c-heading {
+  &_title {
+    font-size: calcRem(32px);
+    font-weight: normal;
+    letter-spacing: calcRem(2px);
+    padding: calcRem(20px) 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #444;
+    position: relative;
+    &::after {
+      background-color: #111;
+      content: "";
+      display: block;
+      height: calcRem(2px);
+      margin: calcRem(25px) auto;
+      width: calcRem(160px);
+    }
+  }
+}

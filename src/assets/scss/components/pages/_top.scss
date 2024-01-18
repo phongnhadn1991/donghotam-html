@@ -118,7 +118,7 @@
       &List {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: calcRem(30px);
+        gap: calcRem(45px) calcRem(30px);
       }
       &Item {
         background-color: #f7f7f7;

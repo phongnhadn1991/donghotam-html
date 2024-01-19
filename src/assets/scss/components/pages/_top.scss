@@ -107,39 +107,6 @@ body {
         }
       }
     }
-    
-    .p-blog {
-      padding: calcRem(30px) 0;
-      border-bottom: 1px solid #F2F2F2;
-      &List {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: calcRem(20px);
-      }
-      &Item {
-        &_thumb {
-          margin-bottom: calcRem(5px);
-          height: calcRem(220px);
-          img {
-            @include imgOb;
-          }
-        }
-        &_title {
-          background: url('../../assets/images/icon_arrow_right.png') left 1px no-repeat;
-          display: block;
-          background-position-y: calcRem(5px);
-          float: left;
-          color: #000;
-          font-weight: 600;
-          padding: 0 0 calcRem(2px) calcRem(26px);
-          font-size: calcRem(15px);
-          color: #444;
-        }
-        &:hover {
-          @include hover-op;
-        }
-      }
-    }
 
     .p-product {
       padding: calcRem(40px) 0;

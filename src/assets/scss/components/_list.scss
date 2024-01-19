@@ -1,0 +1,73 @@
+.p-blog {
+  padding: calcRem(30px) 0;
+  border-bottom: 1px solid #F2F2F2;
+  &Item {
+    &_thumb {
+      margin-bottom: calcRem(5px);
+      height: calcRem(220px);
+      img {
+        @include imgOb;
+      }
+    }
+    &_title {
+      background: url('../../assets/images/icon_arrow_right.png') left 1px no-repeat;
+      display: block;
+      background-position-y: calcRem(5px);
+      float: left;
+      color: #000;
+      font-weight: 600;
+      padding: 0 0 calcRem(2px) calcRem(26px);
+      font-size: calcRem(15px);
+      color: #444;
+    }
+    &:hover {
+      @include hover-op;
+    }
+  }
+  &List {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: calcRem(20px);
+    padding-bottom: calcRem(20px);
+    &.col3 {
+      grid-template-columns: repeat(3,1fr);
+      .p-blogItem {
+        &_thumb {
+          height: calcRem(160px);
+        }
+      }
+    }
+  }
+  &_style2 {
+    &List {
+      display: flex;
+      flex-flow: column;
+      gap: calcRem(10px);
+      padding-bottom: calcRem(20px);
+    }
+    &Item {
+      display: grid;
+      grid-template-columns: calcRem(292px) 1fr;
+      gap: calcRem(20px);
+      padding-bottom: calcRem(10px);
+      border-bottom: 1px solid #ddd;
+      &:hover {
+        @include hover-op;
+      }
+    }
+    &_title {
+      font-weight: bold;
+      color: #908686;
+    }
+    &_thumb {
+      border: 1px solid #ddd;
+      padding: calcRem(3px);
+    }
+    &_body {
+      p {
+        font-size: calcRem(14px);
+        @include line-clamp(4);
+      }
+    }
+  }
+}

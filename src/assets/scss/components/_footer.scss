@@ -1,3 +1,84 @@
 /* ==========================================================================
    #Footer
    ========================================================================== */
+   .p-footer {
+      border-top: 1px solid #ededed;
+      background: #EDEDED;
+      padding: calcRem(60px) 0 0;
+      margin-top: calcRem(35px);
+      &_top {
+         display: grid;
+         gap: calcRem(20px);
+         grid-template-columns: repeat(3, 1fr) calcRem(350px);
+         max-width: calcRem(1100px);
+         margin: auto;
+         margin-bottom: calcRem(20px);
+      }
+      &_bottom {
+         color: #FFF;
+         display: block;
+         background-color: #000;
+         font-size: calcRem(12px);
+         font-style: normal;
+         line-height: 1;
+         margin-bottom: 0;
+         padding: calcRem(30px) 0;
+         text-decoration: none;
+         text-align: center;
+         transition: 0.4s;
+      }
+      &_link {
+         h2 {
+            margin-bottom: calcRem(15px);
+            a {
+               text-transform: uppercase;
+               font-weight: bold;
+               font-size: calcRem(13px);
+               color: #444;
+               &:hover {
+                  @include hover-op;
+               }
+            }
+         }
+         ul {
+            li {
+               a {
+                  font-size: calcRem(13px);
+                  color: #555;
+                  transition: all .2s ease-in-out;
+                  position: relative;
+                  left: 0;
+                  &:hover {
+                     color: #000;
+                     left: calcRem(8px);
+                  }
+               }
+            }
+         }
+      }
+      &_contact {
+         color: #444;
+         strong {
+            font-weight: bold;
+         }
+         h3 {
+            margin-bottom: calcRem(5px);
+         }
+         .p-contact {
+            &_text {
+               font-size: calcRem(13px);
+               color: #444
+            }
+         }
+         .p-listSocial {
+            padding-top: calcRem(10px);
+            a {
+               i {
+                  font-size: calcRem(18px);
+               }
+               font-size: calcRem(13px);
+               color: #444;
+            }
+         }
+      }
+   }

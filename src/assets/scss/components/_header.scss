@@ -1,10 +1,6 @@
 /* ==========================================================================
    #Header
    ========================================================================== */
-body {
-   padding-top: calcRem(90px);
-   height: 5000px;
-}
 .p-header {
    background: #fff;
    border-bottom: 1px solid #EAEAEC;
@@ -18,6 +14,57 @@ body {
    &.hasScroll {
       box-shadow: 1px 4px 5px -3px rgba(0,0,0,0.1);
    }
+   &Search {
+      background-color: #F2F2F2;
+      border-bottom: 1px solid #EBEBEB;
+      height: calcRem(55px);
+      text-align: center;
+      position: fixed;
+      top: calcRem(-55px);
+      left: 0;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .p-searchForm {
+         .ip_search {
+            border: 1px solid #CCC;
+            height: calcRem(28px);
+            padding: calcRem(5px) calcRem(10px);
+            width: calcRem(300px);
+            font-size: calcRem(13px);
+            box-sizing: border-box;
+            margin: 0;
+         }
+         button {
+            background-color: #000;
+            border-style: none;
+            color: #fff;
+            font-size: calcRem(12px);
+            height: calcRem(28px);
+            padding: calcRem(5px) calcRem(10px);
+            box-shadow: none;
+            border: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calcRem(5px)
+         }
+         .groupForm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+      }
+   }
+   &.hasSearch {
+      top: calcRem(55px);
+      .p-headerSearch {
+         top: 0;
+      }
+   }
    &Wrap {
       max-width: calcRem(1040px);
       margin: auto;
@@ -25,7 +72,7 @@ body {
       justify-content: space-between;
       align-items: center;
       gap: calcRem(15px);
-      padding: calcRem(10px) calcRem(10px);
+      padding: 0 calcRem(10px);
    }
    &Logo {
       h1 {
@@ -46,7 +93,64 @@ body {
                   font-size: calcRem(13px);
                   text-transform: uppercase;
                   display: block;
-                  padding: calcRem(15px) 0 calcRem(20px);
+                  padding: calcRem(32px) 0;
+                  transition: opacity 0.3s ease;
+               }
+               &.hasMega {
+                  a {
+                     &::after {
+                        margin-left: calcRem(5px);
+                        font-family: $fa6-pro;
+                        font-size: calcRem(10px);
+                        text-rendering: auto;
+                        content: "\f078";
+                     }
+                  }
+                  &.active {
+                     a {
+                        opacity: 1 !important;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      &_mega {
+         background-color: #F2F2F2;
+         display: none;
+         &Wrap {
+            max-width: calcRem(940px);
+            margin: auto;
+            padding: calcRem(30px) 0;
+            .p-mega {
+               &List {
+                  display: grid;
+                  grid-template-columns: repeat(3,1fr);
+                  gap: calcRem(30px) calcRem(20px);
+               }
+               &Item {
+                  display: grid;
+                  grid-template-columns: calcRem(80px) 1fr;
+                  gap: calcRem(10px);
+                  &:hover {
+                     @include hover-op;
+                  }
+                  &_thumb {
+                     height: calcRem(80px);
+                     img {
+                        @include imgOb;
+                     }
+                  }
+                  &_body {
+                     p {
+                        font-size: calcRem(11px);
+                        color: #333;
+                        &:first-child {
+                           padding-bottom: calcRem(5px);
+                           border-bottom: 1px dotted #333;
+                        }
+                     }
+                  }
                }
             }
          }
@@ -76,6 +180,7 @@ body {
             a {
                display: block;
                padding: calcRem(15px) 0 calcRem(20px);
+               transition: opacity 0.3s ease;
             }
          }
       }

@@ -203,51 +203,6 @@ let Obj = {};
     }
   };
 
-  Obj.sliderHomePage = function () {
-    var swiper = new Swiper(".mySwiper_slogan", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      grabCursor: true,
-      // mousewheel: true,
-      // cssMode: true,
-      // freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      // navigation: {
-      //     nextEl: ".swiper-button-next",
-      //     prevEl: ".swiper-button-prev",
-      // },
-    });
-
-    // stickyslide
-    var options = {
-      accessibility: true,
-      prevNextButtons: true,
-      pageDots: false,
-      setGallerySize: false,
-      arrowShape: {
-        x0: 10,
-        x1: 60,
-        y1: 50,
-        x2: 60,
-        y2: 45,
-        x3: 15,
-      },
-    };
-    var carousel = document.querySelector("[data-carousel]");
-    var slides = document.getElementsByClassName("carousel-cell");
-    var flkty = new Flickity(carousel, options);
-    flkty.on("scroll", function () {
-      flkty.slides.forEach(function (slide, i) {
-        var image = slides[i];
-        var x = ((slide.target + flkty.x) * -1) / 3;
-        image.style.backgroundPosition = x + "px";
-      });
-    });
-  };
 
   Obj.menuSpMulti = () => {
     $(".c-header_sp .menu .menu-item-has-children .sub-menu").before(
@@ -268,12 +223,95 @@ let Obj = {};
 
   // SCROLL ADD STICKY HEADER
   window.addEventListener("scroll", function () {
-    if (window.scrollY >= $header.clientHeight) {
-      $btnScrollTop.classList.add("show");
+    if (window.scrollY != 0) {
+      $header.classList.add("hasScroll");
     } else {
-      $btnScrollTop.classList.remove("show");
+      $header.classList.remove("hasScroll");
     }
   });
+
+  Obj.searchBoxHeader = () => {
+    $('#js-hdSearch').click(() => {
+      $header.classList.toggle("hasSearch");
+    })
+  }
+
+  const funcMenuOpacity = (selector) => {
+    var menuItems = document.querySelectorAll(selector + ' ul li a');
+    
+    menuItems.forEach(function(item) {
+      item.addEventListener('mouseover', function() {
+        menuItems.forEach(function(otherItem) {
+          if (otherItem !== item) {
+            otherItem.style.opacity = '0.3';
+          }
+        });
+      });
+  
+      item.addEventListener('mouseout', function() {
+        menuItems.forEach(function(otherItem) {
+          otherItem.style.opacity = '1';
+        });
+      });
+    });
+  }
+
+  const funcHandelMenuOpacityAll_open = (selector) => {
+    var menuItems = document.querySelectorAll(selector + ' ul li a');
+    menuItems.forEach(function(item) {
+      menuItems.forEach(function(otherItem) {
+        if (otherItem !== item) {
+          otherItem.style.opacity = '0.3';
+        }
+      });
+    });
+  }
+  const funcHandelMenuOpacityAll_close = (selector) => {
+    var menuItems = document.querySelectorAll(selector + ' ul li a');
+    menuItems.forEach(function(item) {
+      menuItems.forEach(function(otherItem) {
+        if (otherItem !== item) {
+          otherItem.style.opacity = '1';
+        }
+      });
+    });
+  }
+  
+  const hoverMenuMega = () => {
+    let liMenuHasMega = document.querySelector(".p-headerMenu ul li.hasMega");
+    let menuMega = document.querySelector(".p-headerMenu_mega");
+
+    liMenuHasMega.addEventListener('mouseenter', function() {
+      menuMega.style.display = 'block';
+      document.body.classList.add('mask');
+    });
+  
+    liMenuHasMega.addEventListener('mouseleave', function() {
+      menuMega.style.display = 'none';
+      document.body.classList.remove('mask');
+    });
+  
+    menuMega.addEventListener('mouseenter', function() {
+      this.style.display = 'block';
+      document.body.classList.add('mask');
+      liMenuHasMega.classList.add('active');
+      funcHandelMenuOpacityAll_open('.p-header');
+    });
+  
+    menuMega.addEventListener('mouseleave', function() {
+      this.style.display = 'none';
+      document.body.classList.remove('mask');
+      liMenuHasMega.classList.remove('active');
+      funcHandelMenuOpacityAll_close('.p-header');
+    });
+  }
+
+  Obj.hoverMenuOpacity = () => {
+    funcMenuOpacity('.p-header');
+    hoverMenuMega();
+  }
+
+  
 
   /************************************************************
    * Obj Window load, ready, scroll, resize and functions
@@ -292,7 +330,8 @@ let Obj = {};
     Obj.handelMenuClickInfo();
     Obj.initAnimationScroll();
     Obj.menuSpMulti();
-    // Obj.sliderHomePage();
+    Obj.searchBoxHeader();
+    Obj.hoverMenuOpacity();
   });
 
   //Window scroll functions

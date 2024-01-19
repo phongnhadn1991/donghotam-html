@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <title>Top Page</title>
+    <title>đồng hồ Tâm - Mãi mãi là niềm tin của bạn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords" content="" />
@@ -25,6 +25,16 @@
 
 <body>
     <header id="header" class="p-header">
+        <div class="p-headerSearch">
+            <div class="p-searchForm">
+                <form action="#" method="get">
+                    <div class="groupForm">
+                        <input name="s" class="ip_search" value="" type="search" placeholder="Tìm kiếm..." />
+                        <button class="sbutton" type="submit">Tìm kiếm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="p-headerWrap">
             <div class="p-headerLogo">
                 <h1>
@@ -36,7 +46,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="#">Thương hiệu</a></li>
+                        <li class="hasMega"><a href="#">Thương hiệu</a></li>
                         <li><a href="#">Bảo hành và sửa chữa</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Hỗ trợ</a></li>
@@ -46,9 +56,87 @@
             </div>
             <div class="p-headerRight">
                 <ul>
-                    <li><a href=""><i class="fa fa-search"></i></a></li>
+                    <li><a id="js-hdSearch" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
                     <li><a href=""><i class="fa fa-cart-plus"></i></a></li>
                 </ul>
+            </div>
+        </div>
+        <div class="p-headerMenu_mega">
+            <div class="p-headerMenu_megaWrap">
+                <div class="p-megaList">
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_1.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_1.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_2.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_2.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_3.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_3.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_4.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_4.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_5.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_5.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_6.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_6.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_7.png" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_7.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                    <a class="p-megaItem" href="#">
+                        <div class="p-megaItem_thumb">
+                            <img src="./assets/images/cate_menu_8.jpg" alt="">
+                        </div>
+                        <div class="p-megaItem_body">
+                            <p><img src="./assets/images/cate_menu_text_8.png" alt=""></p>
+                            <p>Moving ahead. Touching hearts.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -361,7 +449,57 @@
         </div>
     </main>
 
-    <footer id="footer" class="c-footer">
+    <footer id="footer" class="p-footer">
+        <div class="container">
+            <div class="p-footer_top">
+                <div class="p-footer_link">
+                    <h2><a href="#">Về chúng tôi</a></h2>
+                    <ul class="p-footer_linkList">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="p-footer_link">
+                    <h2><a href="#">Hỗ trợ khách hàng</a></h2>
+                    <ul class="p-footer_linkList">
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Vận chuyển / Giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi / trả</a></li>
+                        <li><a href="#">Bảo mật thông tin</a></li>
+                    </ul>
+                </div>
+                <div class="p-footer_link">
+                    <h2><a href="#">Blog</a></h2>
+                    <ul class="p-footer_linkList">
+                        <li><a href="#">Kiến thức đồng hồ</a></li>
+                        <li><a href="#">Câu chuyện thời gian</a></li>
+                        <li><a href="#">Tin tức đồng hồ</a></li>
+                        <li><a href="#">Nhân vật</a></li>
+                    </ul>
+                </div>
+                <div class="p-footer_contact">
+                    <h3><a href="#"><img src="assets/images/img_logo_footer.png" alt=""></a></h3>
+                    <div class="p-contact_text">
+                        <p><strong>Chủ sở hữu:</strong> Đinh Ngọc Tâm</p>
+                        <p><strong>Địa chỉ:</strong> 290 Ông Ích Khiêm, Đà Nẵng, Việt Nam</p>
+                        <p><strong>Điện thoại:</strong> (0236).3824.383</p>
+                        <p><strong>Di động:</strong> 0905.269.697 (SMS, Zalo, Viber)</p>
+                        <p><strong>Email:</strong> donghotam@gmail.com</p>
+                        <p><strong>Facebook:</strong> donghotam1986</p>
+                        <p><strong>Casio website:</strong> casiodanang.com</p>
+                    </div>
+                    <ul class="p-listSocial">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="p-footer_bottom">
+            <div class="container">
+                <p>Copyright © 2013 Donghotam.com. All Rights Reserved. Designed & Developed by PTC</p>
+            </div>
+        </div>
     </footer>
 
     <!-- ======== JAVASCRIPT ======== -->

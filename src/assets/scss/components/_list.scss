@@ -71,3 +71,32 @@
     }
   }
 }
+
+.p-tax {
+  &List {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: calcRem(30px) calcRem(15.5px);
+  }
+  &Item {
+    &:hover {
+      @include hover-op;
+    }
+    &_thumb {
+      margin-bottom: calcRem(10px);
+      height: calcRem(300px);
+      img {
+        @include imgOb;
+      }
+    }
+    &_body {
+      text-align: center;
+      font-size: calcRem(13px);
+      p {
+        &:first-child {
+          min-height: calcRem(50px);
+        }
+      }
+    }
+  }
+}

@@ -107,42 +107,5 @@ body {
         }
       }
     }
-
-    .p-product {
-      padding: calcRem(40px) 0;
-      &List {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: calcRem(45px) calcRem(30px);
-      }
-      &Item {
-        background-color: #f7f7f7;
-        border: solid 1px #c8c8c8;
-        &:hover {
-          @include hover-op;
-        }
-        &_body {
-          text-align: center;
-          font-size: calcRem(17px);
-        }
-        &_title {
-          padding: calcRem(10px);
-          background-color: #000;
-          color: #fff;
-          margin-top: 8px;
-        }
-        &_price {
-          padding: calcRem(10px);
-          line-height: calcRem(22px);
-          text-align: center;
-          .reduced {
-            color: red;
-          }
-          .original {
-            color: #666;
-          }
-        }
-      }
-    }
   }
 }

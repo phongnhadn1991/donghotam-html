@@ -37,6 +37,20 @@
     }
 }
 
+.container_main {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: calcRem($grid-gutter-width);
+    padding-right: calcRem($grid-gutter-width);
+    @include bp('pc') {
+        max-width: calcRem($container-max-width_main);
+    }    
+    @include bp('sp') {
+        padding-left: calcRem($grid-gutter-width-sp);
+        padding-right: calcRem($grid-gutter-width-sp);
+    }
+}
+
 .c-layout{ 
     &--sidebar{
         @include bp('pc'){

@@ -1,0 +1,41 @@
+.l-layoutPage {
+  .l-wrapMain {
+    display: grid;
+    grid-template-columns: calcRem(240px) 1fr;
+    .p-categoryMenu {
+      h2 {
+        font-size: calcRem(16px);
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        line-height: 1.4;
+        margin-bottom: calcRem(15px);
+        padding-left: calcRem(5px);
+        a {
+          color: #444;
+        }
+      }
+      ul {
+        display: flex;
+        flex-flow: column;
+        li {
+          border-bottom: 1px solid #DBDBDD;
+          a {
+            color: #222;
+            display: block;
+            padding: calcRem(11px);
+            text-decoration: none;
+            transition: 0.2s;
+            position: relative;
+            font-size: calcRem(13px);
+          }
+        }
+      }
+    }
+    .p-headingTitle {
+      h1 {
+        font-size: calcRem(25px);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

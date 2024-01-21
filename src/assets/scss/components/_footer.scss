@@ -6,6 +6,10 @@
       background: #EDEDED;
       padding: calcRem(60px) 0 0;
       margin-top: calcRem(35px);
+      @include bp('sp') {
+         padding: 0;
+         margin-top: calcRem(20px);
+      }
       &_top {
          display: grid;
          gap: calcRem(20px);
@@ -13,6 +17,9 @@
          max-width: calcRem(1100px);
          margin: auto;
          margin-bottom: calcRem(20px);
+         @include bp('sp') {
+            display: none;
+         }
       }
       &_bottom {
          color: #FFF;
@@ -26,6 +33,11 @@
          text-decoration: none;
          text-align: center;
          transition: 0.4s;
+         @include bp('sp') {
+            line-height: calcRem(16px);
+            padding: calcRem(10px) 0;
+            font-size: calcRem(10px);
+         }
       }
       &_link {
          h2 {

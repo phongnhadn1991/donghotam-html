@@ -8,6 +8,9 @@
     text-transform: uppercase;
     color: #444;
     position: relative;
+    @include bp('sp') {
+      font-size: calcRem(24px);
+    }
     &::after {
       background-color: #111;
       content: "";
@@ -15,6 +18,11 @@
       height: calcRem(2px);
       margin: calcRem(25px) auto;
       width: calcRem(160px);
+      @include bp('sp') {
+        height: calcRem(1px);
+        width: calcRem(50px);
+        margin: calcRem(15px) auto;
+      }
     }
   }
 }

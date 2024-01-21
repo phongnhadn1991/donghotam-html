@@ -1,5 +1,8 @@
 body {
   padding-top: calcRem(90px);
+  @include bp('sp') {
+    padding-top: calcRem(70px);
+  }
   &.mask {
     &::after {
       content: '';
@@ -61,6 +64,9 @@ body {
     margin-top: calcRem(-10px);
     button {
       font-size: calcRem(80px) !important;
+      @include bp('sp') {
+        font-size: calcRem(40px) !important;
+      }
       outline: none;
       &:hover {
         background: inherit !important;
@@ -71,6 +77,13 @@ body {
 }
 .p-slide {
   margin-bottom: calcRem(40px);
+  @include bp('sp') {
+    margin-bottom: calcRem(20px);
+    .container_content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .c-page {
@@ -79,6 +92,9 @@ body {
       margin-bottom: calcRem(40px);
       &List {
         padding: 0 calcRem(40px);
+        @include bp('sp') {
+          padding: 0 calcRem(20px);
+        }
       }
       &Item {
         a {
@@ -88,7 +104,10 @@ body {
         }
         img {
           width: auto !important;
-          margin: auto !important
+          margin: auto !important;
+          @include bp('sp') {
+            max-height: calcRem(60px);
+          }
         }
       }
     }

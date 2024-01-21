@@ -11,6 +11,9 @@
    width: 100%;
    height: calcRem(90px);
    transition: all .3s ease-in-out;
+   @include bp('sp') {
+      height: calcRem(70px);
+   }
    &.hasScroll {
       box-shadow: 1px 4px 5px -3px rgba(0,0,0,0.1);
    }
@@ -73,6 +76,10 @@
       align-items: center;
       gap: calcRem(15px);
       padding: 0 calcRem(15px);
+      @include bp('sp') {
+         justify-content: center;
+         height: 100%;
+      }
    }
    &Logo {
       h1 {
@@ -82,8 +89,17 @@
       a {
          display: flex;
       }
+      img {
+         max-width: calcRem(270px);
+         @include bp('sp') {
+            max-width: calcRem(220px);
+         }
+      }
    }
    &Menu {
+      @include bp('sp') {
+         display: none;
+      }
       nav {
          ul {
             display: flex;
@@ -157,6 +173,11 @@
       }
    }
    &Right {
+      @include bp('sp') {
+         @include bp('sp') {
+            display: none;
+         }
+      }
       ul {
          display: flex;
          gap: calcRem(20px);

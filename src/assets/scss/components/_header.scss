@@ -4,7 +4,7 @@
 .p-header {
    background: #fff;
    border-bottom: 1px solid #EAEAEC;
-   position: fixed;
+   position: sticky;
    top: 0;
    left: 0;
    z-index: 100;
@@ -220,6 +220,7 @@
       }
    }
 }
+
 .mm-wrapper--opened {
    .fa-bars {
       display: none !important;

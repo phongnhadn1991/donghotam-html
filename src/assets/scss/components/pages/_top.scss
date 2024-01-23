@@ -1,11 +1,5 @@
 body {
   background: #fff;
-  main {
-    padding-top: calcRem(90px);
-    @include bp('sp') {
-      padding-top: calcRem(70px) !important;
-    }
-  }
   &.mask {
     &::after {
       content: '';

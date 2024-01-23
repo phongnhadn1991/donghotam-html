@@ -156,7 +156,7 @@ let Obj = {};
         300
       );
     }
-    $("a[href*=\\#]:not([href=\\#])").click(function () {
+    $("a[href*=\\#]:not([href=\\#]):not([href=\\#menu_sp])").click(function () {
       if (
         location.pathname.replace(/^\//, "") ==
           this.pathname.replace(/^\//, "") &&

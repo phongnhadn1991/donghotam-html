@@ -82,6 +82,19 @@
       }
    }
    &Logo {
+      @include bp('sp') {
+         display: flex;
+         justify-content: center;
+         position: relative;
+         width: 100%;
+         .hamSp {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: calcRem(25px);
+         }
+      }
       h1 {
          font-size: 0;
          line-height: 0;
@@ -206,4 +219,18 @@
          }
       }
    }
+}
+.mm-wrapper--opened {
+   .fa-bars {
+      display: none !important;
+   }
+   .fa-xmark {
+      display: block !important;
+   }
+}
+.mm-listitem:after {
+   inset-inline-start: 0px;
+}
+.mm-wrapper--position-left .mm-slideout, .mm-wrapper--position-right .mm-slideout {
+   transform: inherit;
 }

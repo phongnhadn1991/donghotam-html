@@ -272,7 +272,17 @@
             </div>
         </div>
     </footer>
-
+    
+    <nav class="mmenu only__sp" id="menu_sp">
+        <ul>
+            <li>
+                <a href="#">Về chúng tôi</a>
+                <ul>
+                    <li><a href="#V2">V2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <!-- ======== JAVASCRIPT ======== -->
     <script type="text/javascript" src="./assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./assets/libs/fancybox/jquery.fancybox.min.js"></script>
@@ -313,6 +323,7 @@
         }
         slideFV();
         slideBranch();
+        new Mmenu(document.querySelector("#menu_sp"));
     });
 </script>
 </html>

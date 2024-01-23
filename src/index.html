@@ -15,497 +15,512 @@
     <link rel="stylesheet" href="./assets/fonts/Font-Awesome-640/css/all.css" >
     <link rel="stylesheet" type="text/css" href="./assets/libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/libs/scrollbar/jquery.scrollbar.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/libs/owlcarousel/owl.theme.default.min.css" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/libs/owlcarousel/owl.carousel.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/libs/mmenu/mmenu.css" referrerpolicy="no-referrer" />
     <!-- build:css css/main.min.css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
     <!-- endbuild -->
 </head>
 
 <body>
-    <header id="header" class="p-header">
-        <div class="p-headerSearch">
-            <div class="p-searchForm">
-                <form action="#" method="get">
-                    <div class="groupForm">
-                        <input name="s" class="ip_search" value="" type="search" placeholder="Tìm kiếm..." />
-                        <button class="sbutton" type="submit">Tìm kiếm</button>
-                    </div>
-                </form>
+    <div id="page">
+        <header id="header" class="p-header">
+            <div class="p-headerSearch only__pc">
+                <div class="p-searchForm">
+                    <form action="#" method="get">
+                        <div class="groupForm">
+                            <input name="s" class="ip_search" value="" type="search" placeholder="Tìm kiếm..." />
+                            <button class="sbutton" type="submit">Tìm kiếm</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="p-headerWrap">
-            <div class="p-headerLogo">
-                <h1>
-                    Đồng Hồ Tâm
-                    <a href="#"><img src="./assets/images/img_hd_logo.png" alt=""></a>
-                </h1>
-            </div>
-            <div class="p-headerMenu">
-                <nav>
+            <div class="p-headerWrap">
+                <div class="p-headerLogo">
+                    <a class="hamSp" href="#menu_sp">
+                        <i class="fa-light fa-bars d-"></i>
+                        <i class="fa-light fa-xmark d--none"></i>
+                    </a>
+                    <h1>
+                        Đồng Hồ Tâm
+                        <a href="#"><img src="./assets/images/img_hd_logo.png" alt=""></a>
+                    </h1>
+                </div>
+                <div class="p-headerMenu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li class="hasMega"><a href="#">Thương hiệu</a></li>
+                            <li><a href="#">Bảo hành và sửa chữa</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-headerRight">
                     <ul>
-                        <li><a href="#">Về chúng tôi</a></li>
-                        <li class="hasMega"><a href="#">Thương hiệu</a></li>
-                        <li><a href="#">Bảo hành và sửa chữa</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Hỗ trợ</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="p-headerRight">
-                <ul>
-                    <li><a id="js-hdSearch" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
-                    <li><a href=""><i class="fa fa-cart-plus"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="p-headerMenu_mega">
-            <div class="p-headerMenu_megaWrap">
-                <div class="p-megaList">
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_1.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_1.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_2.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_2.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_3.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_3.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_4.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_4.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_5.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_5.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_6.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_6.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_7.png" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_7.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                    <a class="p-megaItem" href="#">
-                        <div class="p-megaItem_thumb">
-                            <img src="./assets/images/cate_menu_8.jpg" alt="">
-                        </div>
-                        <div class="p-megaItem_body">
-                            <p><img src="./assets/images/cate_menu_text_8.png" alt=""></p>
-                            <p>Moving ahead. Touching hearts.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="c-main c-main-home c-page_home">
-        <div class="p-slide">
-            <div class="container_content">
-                <div class="p-slideList owl-carousel owl-theme" id="js-slideFv">
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="p-slideItem">
-                        <a href="#">
-                            <img src="./assets/images/slider6.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-branch">
-            <div class="container_content">
-                <div class="p-branchList owl-carousel owl-theme" id="js-slideBranch">
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch2.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch3.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch4.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch5.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch6.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch7.png" alt="">
-                        </a>
-                    </div>
-                    <div class="p-branchItem">
-                        <a href="#">
-                            <img src="./assets/images/branch8.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-aboutUs">
-            <div class="container">
-                <div class="c-heading">
-                    <h2 class="c-heading_title">
-                        Về chúng tôi
-                    </h2>
-                </div>
-                <div class="p-aboutUs_ct">
-                    <article class="post-content">
-                        <p><b>Đồng hồ Tâm</b> xin kính chào Quý khách đã ghé thăm website của chúng tôi, chúc Quý khách gặp nhiều may mắn và thành công trong cuộc sống.</p>
-                        <p><b>Đồng hồ Tâm</b> đã khởi nghiệp từ một hộp đồng hồ rất bé nhỏ, gặp muôn vàn khó khăn trong công việc. Nhưng với sự quyết tâm, lòng yêu nghề, qua sự cố gắng tìm tòi, học hỏi và không ngừng phấn đấu. Sau 30 năm kinh doanh liên tục, <b>Đồng hồ Tâm</b> đã chính thức tạo dựng cho mình một chỗ đứng vững chắc trong ngành đồng hồ.
-                        Luôn luôn lấy chữ TÍN làm trọng, <b>Đồng hồ Tâm</b> là một địa chỉ đáng tin cậy, là niềm tin tưởng gửi gắm của tất cả Quý khách tại Đà Nẵng cùng các tỉnh, khu vực miền Trung và cả nước.
-                        Và đến nay, <b>Đồng hồ Tâm</b> vinh dự được làm đại lý chính thức cho các hãng đồng hồ nổi tiếng như Seiko, Citizen, Casio, Olympia Star, Olym Pianus, Le Chateau, Rhythm, Sunrise, ...
-                        Trong 30 năm qua, <b>Đồng hồ Tâm</b> đã cố gắng tạo dựng uy tín của mình trên thị trường, luôn luôn tôn trọng sự lựa chọn của Quý khách và trong tương lai, <b>Đồng hồ Tâm</b> sẽ cố gắng phấn đấu kinh doanh tốt hơn nữa để ngày càng là sự lựa chọn hoàn hảo của Quý khách gần xa.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-        <div class="p-blog">
-            <div class="container">
-                <div class="c-heading">
-                    <h2 class="c-heading_title">
-                        360° ĐỒNG HỒ
-                    </h2>
-                </div>
-                <div class="p-blogList">
-                    <a href="#" class="p-blogItem">
-                        <div class="p-blogItem_thumb">
-                            <img src="./assets/images/blog1.jpg" alt="">
-                        </div>
-                        <div class="p-blogItem_title">
-                            Kiến thức đồng hồ
-                        </div>
-                    </a>
-                    <a href="#" class="p-blogItem">
-                        <div class="p-blogItem_thumb">
-                            <img src="./assets/images/blog2.jpg" alt="">
-                        </div>
-                        <div class="p-blogItem_title">
-                            Câu chuyện thời gian
-                        </div>
-                    </a>
-                    <a href="#" class="p-blogItem">
-                        <div class="p-blogItem_thumb">
-                            <img src="./assets/images/blog3.jpg" alt="">
-                        </div>
-                        <div class="p-blogItem_title">
-                            Tin tức đồng hồ
-                        </div>
-                    </a>
-                    <a href="#" class="p-blogItem">
-                        <div class="p-blogItem_thumb">
-                            <img src="./assets/images/blog4.jpg" alt="">
-                        </div>
-                        <div class="p-blogItem_title">
-                            Nhân vật
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="p-product">
-            <div class="container">
-                <div class="c-heading">
-                    <div class="c-heading_title">Sản phẩm mới</div>
-                </div>
-                <div class="p-productList">
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product1.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product2.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product3.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product4.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="p-product">
-            <div class="container">
-                <div class="c-heading">
-                    <div class="c-heading_title">Sản phẩm bán chạy</div>
-                </div>
-                <div class="p-productList">
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product1.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product2.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product3.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product4.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product1.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product2.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product3.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="p-productItem">
-                        <div class="p-productItem_thumb">
-                            <img src="./assets/images/product4.jpg" alt="">
-                        </div>
-                        <div class="p-productItem_body">
-                            <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
-                            <div class="p-productItem_price">
-                                <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
-                                <div class="original"><del>7.130.000 VNĐ</del></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer id="footer" class="p-footer">
-        <div class="container_main">
-            <div class="p-footer_top">
-                <div class="p-footer_link">
-                    <h2><a href="#">Về chúng tôi</a></h2>
-                    <ul class="p-footer_linkList">
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Tuyển dụng</a></li>
-                    </ul>
-                </div>
-                <div class="p-footer_link">
-                    <h2><a href="#">Hỗ trợ khách hàng</a></h2>
-                    <ul class="p-footer_linkList">
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">Vận chuyển / Giao hàng</a></li>
-                        <li><a href="#">Chính sách bảo hành</a></li>
-                        <li><a href="#">Chính sách đổi / trả</a></li>
-                        <li><a href="#">Bảo mật thông tin</a></li>
-                    </ul>
-                </div>
-                <div class="p-footer_link">
-                    <h2><a href="#">Blog</a></h2>
-                    <ul class="p-footer_linkList">
-                        <li><a href="#">Kiến thức đồng hồ</a></li>
-                        <li><a href="#">Câu chuyện thời gian</a></li>
-                        <li><a href="#">Tin tức đồng hồ</a></li>
-                        <li><a href="#">Nhân vật</a></li>
-                    </ul>
-                </div>
-                <div class="p-footer_contact">
-                    <h3><a href="#"><img src="assets/images/img_logo_footer.png" alt=""></a></h3>
-                    <div class="p-contact_text">
-                        <p><strong>Chủ sở hữu:</strong> Đinh Ngọc Tâm</p>
-                        <p><strong>Địa chỉ:</strong> 290 Ông Ích Khiêm, Đà Nẵng, Việt Nam</p>
-                        <p><strong>Điện thoại:</strong> (0236).3824.383</p>
-                        <p><strong>Di động:</strong> 0905.269.697 (SMS, Zalo, Viber)</p>
-                        <p><strong>Email:</strong> donghotam@gmail.com</p>
-                        <p><strong>Facebook:</strong> donghotam1986</p>
-                        <p><strong>Casio website:</strong> casiodanang.com</p>
-                    </div>
-                    <ul class="p-listSocial">
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a id="js-hdSearch" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
+                        <li><a href=""><i class="fa fa-cart-plus"></i></a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="p-footer_bottom">
+            <div class="p-headerMenu_mega">
+                <div class="p-headerMenu_megaWrap">
+                    <div class="p-megaList">
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_1.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_1.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_2.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_2.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_3.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_3.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_4.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_4.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_5.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_5.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_6.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_6.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_7.png" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_7.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                        <a class="p-megaItem" href="#">
+                            <div class="p-megaItem_thumb">
+                                <img src="./assets/images/cate_menu_8.jpg" alt="">
+                            </div>
+                            <div class="p-megaItem_body">
+                                <p><img src="./assets/images/cate_menu_text_8.png" alt=""></p>
+                                <p>Moving ahead. Touching hearts.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="c-main c-main-home c-page_home">
+            <div class="p-slide">
+                <div class="container_content">
+                    <div class="p-slideList owl-carousel owl-theme" id="js-slideFv">
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="p-slideItem">
+                            <a href="#">
+                                <img src="./assets/images/slider6.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-branch">
+                <div class="container_content">
+                    <div class="p-branchList owl-carousel owl-theme" id="js-slideBranch">
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch7.png" alt="">
+                            </a>
+                        </div>
+                        <div class="p-branchItem">
+                            <a href="#">
+                                <img src="./assets/images/branch8.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-aboutUs">
+                <div class="container">
+                    <div class="c-heading">
+                        <h2 class="c-heading_title">
+                            Về chúng tôi
+                        </h2>
+                    </div>
+                    <div class="p-aboutUs_ct">
+                        <article class="post-content">
+                            <p><b>Đồng hồ Tâm</b> xin kính chào Quý khách đã ghé thăm website của chúng tôi, chúc Quý khách gặp nhiều may mắn và thành công trong cuộc sống.</p>
+                            <p><b>Đồng hồ Tâm</b> đã khởi nghiệp từ một hộp đồng hồ rất bé nhỏ, gặp muôn vàn khó khăn trong công việc. Nhưng với sự quyết tâm, lòng yêu nghề, qua sự cố gắng tìm tòi, học hỏi và không ngừng phấn đấu. Sau 30 năm kinh doanh liên tục, <b>Đồng hồ Tâm</b> đã chính thức tạo dựng cho mình một chỗ đứng vững chắc trong ngành đồng hồ.
+                            Luôn luôn lấy chữ TÍN làm trọng, <b>Đồng hồ Tâm</b> là một địa chỉ đáng tin cậy, là niềm tin tưởng gửi gắm của tất cả Quý khách tại Đà Nẵng cùng các tỉnh, khu vực miền Trung và cả nước.
+                            Và đến nay, <b>Đồng hồ Tâm</b> vinh dự được làm đại lý chính thức cho các hãng đồng hồ nổi tiếng như Seiko, Citizen, Casio, Olympia Star, Olym Pianus, Le Chateau, Rhythm, Sunrise, ...
+                            Trong 30 năm qua, <b>Đồng hồ Tâm</b> đã cố gắng tạo dựng uy tín của mình trên thị trường, luôn luôn tôn trọng sự lựa chọn của Quý khách và trong tương lai, <b>Đồng hồ Tâm</b> sẽ cố gắng phấn đấu kinh doanh tốt hơn nữa để ngày càng là sự lựa chọn hoàn hảo của Quý khách gần xa.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="p-blog">
+                <div class="container">
+                    <div class="c-heading">
+                        <h2 class="c-heading_title">
+                            360° ĐỒNG HỒ
+                        </h2>
+                    </div>
+                    <div class="p-blogList">
+                        <a href="#" class="p-blogItem">
+                            <div class="p-blogItem_thumb">
+                                <img src="./assets/images/blog1.jpg" alt="">
+                            </div>
+                            <div class="p-blogItem_title">
+                                Kiến thức đồng hồ
+                            </div>
+                        </a>
+                        <a href="#" class="p-blogItem">
+                            <div class="p-blogItem_thumb">
+                                <img src="./assets/images/blog2.jpg" alt="">
+                            </div>
+                            <div class="p-blogItem_title">
+                                Câu chuyện thời gian
+                            </div>
+                        </a>
+                        <a href="#" class="p-blogItem">
+                            <div class="p-blogItem_thumb">
+                                <img src="./assets/images/blog3.jpg" alt="">
+                            </div>
+                            <div class="p-blogItem_title">
+                                Tin tức đồng hồ
+                            </div>
+                        </a>
+                        <a href="#" class="p-blogItem">
+                            <div class="p-blogItem_thumb">
+                                <img src="./assets/images/blog4.jpg" alt="">
+                            </div>
+                            <div class="p-blogItem_title">
+                                Nhân vật
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-product">
+                <div class="container">
+                    <div class="c-heading">
+                        <div class="c-heading_title">Sản phẩm mới</div>
+                    </div>
+                    <div class="p-productList">
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product1.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product2.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product3.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product4.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-product">
+                <div class="container">
+                    <div class="c-heading">
+                        <div class="c-heading_title">Sản phẩm bán chạy</div>
+                    </div>
+                    <div class="p-productList">
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product1.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product2.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product3.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product4.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product1.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product2.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product3.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="p-productItem">
+                            <div class="p-productItem_thumb">
+                                <img src="./assets/images/product4.jpg" alt="">
+                            </div>
+                            <div class="p-productItem_body">
+                                <h4 class="p-productItem_title">RA-AR0005Y10B</h4>
+                                <div class="p-productItem_price">
+                                    <div class="reduced"><span>Giá:</span> 6.419.000 VNĐ</div>
+                                    <div class="original"><del>7.130.000 VNĐ</del></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="p-footer">
             <div class="container_main">
-                <p>Copyright © 2013 Donghotam.com. <br class="only__sp" /> Rights Reserved. Designed & Developed by PTC</p>
+                <div class="p-footer_top">
+                    <div class="p-footer_link">
+                        <h2><a href="#">Về chúng tôi</a></h2>
+                        <ul class="p-footer_linkList">
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-footer_link">
+                        <h2><a href="#">Hỗ trợ khách hàng</a></h2>
+                        <ul class="p-footer_linkList">
+                            <li><a href="#">Hướng dẫn mua hàng</a></li>
+                            <li><a href="#">Vận chuyển / Giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách đổi / trả</a></li>
+                            <li><a href="#">Bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-footer_link">
+                        <h2><a href="#">Blog</a></h2>
+                        <ul class="p-footer_linkList">
+                            <li><a href="#">Kiến thức đồng hồ</a></li>
+                            <li><a href="#">Câu chuyện thời gian</a></li>
+                            <li><a href="#">Tin tức đồng hồ</a></li>
+                            <li><a href="#">Nhân vật</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-footer_contact">
+                        <h3><a href="#"><img src="assets/images/img_logo_footer.png" alt=""></a></h3>
+                        <div class="p-contact_text">
+                            <p><strong>Chủ sở hữu:</strong> Đinh Ngọc Tâm</p>
+                            <p><strong>Địa chỉ:</strong> 290 Ông Ích Khiêm, Đà Nẵng, Việt Nam</p>
+                            <p><strong>Điện thoại:</strong> (0236).3824.383</p>
+                            <p><strong>Di động:</strong> 0905.269.697 (SMS, Zalo, Viber)</p>
+                            <p><strong>Email:</strong> donghotam@gmail.com</p>
+                            <p><strong>Facebook:</strong> donghotam1986</p>
+                            <p><strong>Casio website:</strong> casiodanang.com</p>
+                        </div>
+                        <ul class="p-listSocial">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+            <div class="p-footer_bottom">
+                <div class="container_main">
+                    <p>Copyright © 2013 Donghotam.com. <br class="only__sp" /> Rights Reserved. Designed & Developed by PTC</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 
+    <nav class="mmenu only__sp" id="menu_sp">
+        <ul>
+            <li>
+                <a href="#">Về chúng tôi</a>
+                <ul>
+                    <li><a href="#V2">V2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <!-- ======== JAVASCRIPT ======== -->
     <script type="text/javascript" src="./assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./assets/libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="./assets/libs/owlcarousel/owl.carousel.min.js" referrerpolicy="no-referrer"></script>
+    <script src="./assets/libs/mmenu/mmenu.js" referrerpolicy="no-referrer"></script>
     <!-- build:js js/bundle.min.js -->
     <script type="text/javascript" src="./assets/js/main.js"></script>
     <!-- endbuild -->
@@ -550,6 +565,8 @@
         }
         slideFV();
         slideBranch();
+        new Mmenu(document.querySelector("#menu_sp"));
     });
 </script>
+
 </html>

@@ -15,7 +15,7 @@ let Obj = {};
   };
 
   $.fn.isMobile = function () {
-    if ($window.width() > 750) {
+    if ($window.width() > 600) {
       return false;
     }
     return true;
@@ -332,6 +332,13 @@ let Obj = {};
     Obj.menuSpMulti();
     Obj.searchBoxHeader();
     Obj.hoverMenuOpacity();
+    
+    if($body.isMobile()) {
+      new Mmenu(document.querySelector("#menu_sp"));
+    }else {
+      $('body').removeClass('mm-wrapper mm-wrapper--position-left')
+      $('.mm-page.mm-slideout').removeClass('mm-page mm-slideout')
+    }
   });
 
   //Window scroll functions
@@ -340,7 +347,14 @@ let Obj = {};
   });
 
   //Window resize functions
-  $window.on("resize", function () {});
+  $window.on("resize", function () {
+    if($body.isMobile()) {
+      new Mmenu(document.querySelector("#menu_sp"));
+    }else {
+      $('body').removeClass('mm-wrapper mm-wrapper--position-left')
+      $('.mm-page.mm-slideout').removeClass('mm-page mm-slideout')
+    }
+  });
 })(jQuery);
 
 // JAVASCRIPT MCN HANDLE NAV MODAL
